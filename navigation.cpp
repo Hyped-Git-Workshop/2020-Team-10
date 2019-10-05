@@ -18,7 +18,10 @@ Navigation::~Navigation()
 void Navigation::add_accelerometer(Accelerometer *a)
 {
   /// TASK 7 (PERSON B) ////////////////////////////////////////////////////////
-  this->accelerometers.push_back(a);
+  double a = this->get_acceleration();
+this->velocity += a*DT; //integrate
+return this->velocity;
+this->accelerometers.push_back(a);
   /// END OF TASK 7B ///////////////////////////////////////////////////////////
 }
 
